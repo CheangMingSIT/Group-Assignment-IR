@@ -14,7 +14,7 @@ class WorldbankcrawlerPipeline:
     def open_spider(self, spider):
         self.file = open('output/worldbank_data.csv', 'w', newline='', encoding='utf-8')
         self.exporter = csv.writer(self.file)
-        self.exporter.writerow(['title', 'description', 'url'])
+        self.exporter.writerow(['title', 'description', 'url', 'content'])  # Add 'content' to the header
         self.seen_hashes = set()
 
     def close_spider(self, spider):
@@ -34,8 +34,8 @@ class WorldbankcrawlerPipeline:
         else:
             self.seen_hashes.add(url_hash)
 
-        # Write the item to the CSV file, excluding the URL hash
-        self.exporter.writerow([item['title'], item['description'], item['url']])
+        # Write the item to the CSV file, including the content
+        self.exporter.writerow([item['title'], item['description'], item['url'], item['content']])
         return item
 
     def is_image_url(self, url):

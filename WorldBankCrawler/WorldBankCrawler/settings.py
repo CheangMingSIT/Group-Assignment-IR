@@ -14,13 +14,13 @@ NEWSPIDER_MODULE = "WorldBankCrawler.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Singapore Institute of Technology CS Students (+https://www.singaporetech.edu.sg)"
+USER_AGENT = "Singapore Institute of Technology UOG Peter Yau (+https://www.singaporetech.edu.sg)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 100
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
