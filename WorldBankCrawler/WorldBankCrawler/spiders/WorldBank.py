@@ -27,7 +27,8 @@ class WorldbankSpider(CrawlSpider):
         item = WorldbankcrawlerItem()
         item['title'] = response.css('title::text').extract_first()
         item['description'] = response.xpath("/html/head/meta[@name='description']/@content").extract_first()
-        item['url'] = response.url
+        item['destination_url'] = response.url
+        item['source_url'] = response.meta.get('source_url', 'N/A')
         
         # Extract the entire body content of the page
         html_content = response.css('body').extract_first()  # or response.xpath('//body').extract_first()
@@ -38,6 +39,15 @@ class WorldbankSpider(CrawlSpider):
         item['content'] = transformed_text
 
         yield item
+
+        # Follow links and store the current URL as the source URL
+        links = LinkExtractor(allow=()).extract_links(response)
+        for link in links:
+            yield scrapy.Request(
+                url=link.url,
+                callback=self.parse_item,
+                meta={'source_url': response.url}  # Store the current URL in meta attribute
+            )
     
     def convert_html_to_text(self, html):
         soup = BeautifulSoup(html, 'html.parser')
