@@ -20,15 +20,18 @@ USER_AGENT = "Singapore Institute of Technology UOG Peter Yau (+https://www.sing
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 10
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 # DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
-CONCURRENT_REQUESTS_PER_DOMAIN = 4
-CONCURRENT_REQUESTS_PER_IP = 4
+CONCURRENT_REQUESTS_PER_DOMAIN = 32
+CONCURRENT_REQUESTS_PER_IP = 32
+
+# LOGGING
+LOG_LEVEL = "INFO"
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
@@ -71,23 +74,23 @@ ITEM_PIPELINES = {
 AUTOTHROTTLE_ENABLED = True
 AUTOTHROTTLE_START_DELAY = 5  # Initial download delay
 AUTOTHROTTLE_MAX_DELAY = 60  # Maximum download delay to handle high latencies
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0  # Average number of requests sent in parallel to each remote server
+AUTOTHROTTLE_TARGET_CONCURRENCY = 10.0  # Average number of requests sent in parallel to each remote server
 AUTOTHROTTLE_DEBUG = False # Enable showing throttling stats for every response received
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-#HTTPCACHE_ENABLED = True
-#HTTPCACHE_EXPIRATION_SECS = 0
-#HTTPCACHE_DIR = "httpcache"
-#HTTPCACHE_IGNORE_HTTP_CODES = []
-#HTTPCACHE_STORAGE = "scrapy.extensions.httpcache.FilesystemCacheStorage"
+HTTPCACHE_ENABLED = True
+HTTPCACHE_EXPIRATION_SECS = 0
+HTTPCACHE_DIR = "httpcache"
+HTTPCACHE_IGNORE_HTTP_CODES = []
+HTTPCACHE_STORAGE = "scrapy.extensions.httpcache.FilesystemCacheStorage"
 
 #JOBDIR 
 
 
 # Retry settings
 RETRY_ENABLED = True
-RETRY_TIMES = 10  # Number of retries if a request fails
+RETRY_TIMES = 5  # Number of retries if a request fails
 RETRY_HTTP_CODES = [500, 502, 503, 504, 522, 524, 408]  # HTTP response codes to retry
 
 # Set settings whose default value is deprecated to a future-proof value

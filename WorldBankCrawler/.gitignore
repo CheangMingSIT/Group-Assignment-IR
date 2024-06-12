@@ -1,2 +1,4 @@
 .DS_Store
 .scrapy
+__pycache__
+output/worldbank_data.csv
