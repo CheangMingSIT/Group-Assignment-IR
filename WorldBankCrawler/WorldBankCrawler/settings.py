@@ -20,7 +20,7 @@ USER_AGENT = "Singapore Institute of Technology UOG IR Grp 17 CS Student  (+http
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 64
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -72,7 +72,7 @@ ITEM_PIPELINES = {
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_START_DELAY = 5  # Initial download delay
+AUTOTHROTTLE_START_DELAY = 2  # Initial download delay
 AUTOTHROTTLE_MAX_DELAY = 60  # Maximum download delay to handle high latencies
 AUTOTHROTTLE_TARGET_CONCURRENCY = 10.0  # Average number of requests sent in parallel to each remote server
 AUTOTHROTTLE_DEBUG = False # Enable showing throttling stats for every response received
