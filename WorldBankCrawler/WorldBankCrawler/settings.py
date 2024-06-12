@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = "WorldBankCrawler.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Singapore Institute of Technology UOG Peter Yau (+https://www.singaporetech.edu.sg)"
+USER_AGENT = "Singapore Institute of Technology UOG IR Grp 17 CS Student  (+https://www.singaporetech.edu.sg)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
