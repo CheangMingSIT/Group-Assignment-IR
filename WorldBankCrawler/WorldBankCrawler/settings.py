@@ -69,9 +69,9 @@ ITEM_PIPELINES = {
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 AUTOTHROTTLE_ENABLED = False
-AUTOTHROTTLE_START_DELAY = 2  # Initial download delay
+AUTOTHROTTLE_START_DELAY = 3  # Initial download delay
 AUTOTHROTTLE_MAX_DELAY = 60  # Maximum download delay to handle high latencies
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0  # Average number of requests sent in parallel to each remote server
+AUTOTHROTTLE_TARGET_CONCURRENCY = 5.0  # Average number of requests sent in parallel to each remote server
 AUTOTHROTTLE_DEBUG = False # Enable showing throttling stats for every response received
 
 # Enable and configure HTTP caching (disabled by default)
