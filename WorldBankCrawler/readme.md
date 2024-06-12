@@ -1,8 +1,9 @@
 # IR Project
+
 ## Installation
 
 ```
 pip install scrapy
-pip install BeautifulSoup
+pip install BeautifulSoup4
 pip install nltk
 ```

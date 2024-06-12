@@ -16,8 +16,8 @@ stemmer = PorterStemmer()
 
 class WorldbankSpider(CrawlSpider):
     name = "WorldBank"
-    allowed_domains = ["data.worldbank.org"]
-    start_urls = ["https://data.worldbank.org"]
+    allowed_domains = ["quotes.toscrape.com"]
+    start_urls = ["https://quotes.toscrape.com"]
 
     rules = (
         Rule(LinkExtractor(allow=()), callback='parse_item', follow=True),
