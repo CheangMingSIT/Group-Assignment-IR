@@ -1,0 +1,96 @@
+/* SearchPage.css */
+
+/* Styles for Google-like Navigation Bar */
+.google-navigation {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    padding: 16px 40px; /* Increased horizontal padding for a longer width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  }
+  
+  .google-logo img {
+    height: 36px; /* Adjusted height for the logo */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 8px 16px; /* Padding for the search bar */
+    margin: 0 20px;
+    max-width: 600px; /* Limiting the width of the search bar */
+    width: 100%; /* Ensuring it takes up available space */
+    background-color: #ffffff; /* Background color for the search bar */
+  }
+  
+  .google-search-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .google-search-input::placeholder {
+    color: #9aa0a6; /* Google placeholder text color */
+  }
+  
+  .gsb-container {
+    padding: 10px;
+    background-color: #1a73e8; /* Google blue */
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    cursor: pointer;
+  }
+  
+  .gsb {
+    height: 24px;
+  }
+  
+  /* Styles for Search Results */
+  .search-results {
+    width: 60%;
+    margin: 20px 20px;
+  }
+
+  .results-header {
+    margin-left: 10px;
+    font-family: 'Arial'
+  }
+    
+  .results-header h2 {
+    font-size: 0.8rem;
+    color: #80868b; /* Google light gray */
+  }
+  
+  .search-result {
+    background-color: #fff;
+    padding: 15px;
+  }
+  
+  .result-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a0dab; /* Google blue */
+  }
+  
+  .result-url {
+    font-size: 14px;
+    color: #006621; /* Google green */
+    margin-bottom: 5px;
+  }
+  
+  .result-description {
+    font-size: 16px;
+    color: #4d5156; /* Google gray */
+    line-height: 1.6;
+  }
+  
+  .no-results {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #80868b; /* Google light gray */
+  }
