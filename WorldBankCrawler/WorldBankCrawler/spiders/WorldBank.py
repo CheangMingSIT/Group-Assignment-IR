@@ -16,11 +16,11 @@ stemmer = PorterStemmer()
 
 class WorldbankSpider(CrawlSpider):
     name = "WorldBank"
-    allowed_domains = ["quotes.toscrape.com"]
-    start_urls = ["https://quotes.toscrape.com"]
+    allowed_domains = ["data.worldbank.org/"]
+    start_urls = ["https://data.worldbank.org/"] # only change this 2 line
 
     rules = (
-        Rule(LinkExtractor(allow=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=(r'teaching-web-crawl-test/.*')), callback='parse_item', follow=True),
     )
 
     def parse_item(self, response):

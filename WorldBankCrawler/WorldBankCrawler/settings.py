@@ -18,7 +18,7 @@ USER_AGENT = "Singapore Institute of Technology UOG Group 17 CS Students IR (+ht
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-
+ROBOTSTXT_URL = "https://drpeteryau.github.io/teaching-web-crawl-test/robots.txt"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 32
 

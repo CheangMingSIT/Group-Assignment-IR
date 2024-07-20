@@ -1,0 +1,14 @@
+Server: nginx
+Date: Sat, 20 Jul 2024 07:33:37 GMT
+Content-Type: text/html; charset=utf-8
+X-Powered-By: Express
+X-Xss-Protection: 1
+X-Xss-Protection: 1; mode=block
+Etag: W/"2bc2e-F91fuM3ODyvCNvqDQSdgWw"
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN
+X-Proxy-Cache: HIT
+X-Source: prod-web-2
+X-Content-Type-Options: nosniff
+Http-Strict-Transport-Security: max-age=31536000
+Content-Encoding: gzip
